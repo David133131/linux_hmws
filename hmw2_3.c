@@ -27,6 +27,8 @@ int main(int argc, char* argv[]){
 	if(pthread_join(ths[0], (void**) &result) != 0){
 			perror("Smth went wrong");
 	}
+	
+	free(result);
 
 	printf("The magic number is equal to %d\n", *result);
 	return 0;
