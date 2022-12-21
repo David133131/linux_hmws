@@ -9,8 +9,8 @@
 void* magic_num(void* arg){
   srand(time(NULL));
   int num = rand() % 500;
-	*(int*)arg = num;
-	return arg;
+  *(int*)arg = num;
+  return arg;
 }
 
 int main(int argc, char* argv[]){
@@ -28,8 +28,10 @@ int main(int argc, char* argv[]){
 			perror("Smth went wrong");
 	}
 	
-	free(result);
+	
 
 	printf("The magic number is equal to %d\n", *result);
+	
+	free(result);
 	return 0;
 }
